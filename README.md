@@ -4,7 +4,7 @@
 
 ---
 
-General Assembly WDIR Unit_04 Project
+[General Assembly WDIR](https://generalassemb.ly/) Unit_04 Project
 
 Contributers:
 

@@ -1,6 +1,7 @@
 # nitPIC
 ##### a photosharing app
 (not that there arent already a crap ton)
+[link to api repo](https://github.com/estermer/nitpic-api)
 
 ---
 

@@ -1,4 +1,4 @@
-![img/NITPIC.png](nitpic pic)
+![nitpic pic](img/NITPIC.png)
 ##### a photosharing app
 (not that there arent already a crap ton)
 

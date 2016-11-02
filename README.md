@@ -15,3 +15,18 @@ Contributers:
   [Eric Stermer](https://github.com/estermer)
   
 ---
+
+## App Overview
+Users will be able to register and create albums and photos. Albums and photos will need to be named and described by their owners. Users will be able to view other user's' albums. Maybe users can comment on photos, or either up/down vote them.
+
+## User Stories
+
+List user stories here
+
+## Wireframe
+
+inster photo/photos here
+
+## Daily Progress
+
+daily progress here

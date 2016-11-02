@@ -29,4 +29,5 @@ inster photo/photos here
 
 ## Daily Progress
 
-daily progress here
+#### Day 1
+Spent the first night after class shooting around ideas of what project we wanted to create. First we were thinking about a sound share app, but in our limited time learning AWS and a media player functionality would be too much. So we decided on a picture sharing app, sort of like an imagur or instagram. Took some time to think of a name and set up the GitHub and Trello Team to collaborate. It was a very short night.

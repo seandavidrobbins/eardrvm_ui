@@ -1,4 +1,4 @@
-# NITPIC
+# nitPIC
 ##### a photosharing app
 (not that there arent a crap ton already)
 

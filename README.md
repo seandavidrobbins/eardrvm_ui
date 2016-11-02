@@ -1,5 +1,5 @@
 # NITPIC
-## a photosharing app
+##### a photosharing app
 (not that there arent a crap ton already)
 
 General Assembly WDIR Unit_04 Project

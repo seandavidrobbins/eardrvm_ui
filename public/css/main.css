@@ -11,10 +11,19 @@ body {
   border-radius: 20px;
   margin-left: 5px;
 }
-#welcomePic {
-  position: absolute;
+/*#welcomePic {
+  position:relative;
+
    width: 100%;
    height: 100%;
+}*/
+.layer {
+    background-color: rgba(150, 247, 216, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 #apps {
   width: 20em;

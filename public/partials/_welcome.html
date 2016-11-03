@@ -34,29 +34,22 @@
 
      <div ng-controller="usersController as users">
        <div class="row">
-         <form class="col s12" ng-submit="users.createUser(user)">
+         <form class="col s12" ng-submit="users.signup(userPass)">
            <div class="row">
-             <div class="input-field col s6">
-               <input id="first_name" type="text" class="validate" ng-model="user.firstName">
-               <label for="first_name">First Name</label>
-             </div>
-             <div class="input-field col s6">
-               <input id="last_name" type="text" class="validate" ng-model="user.lastName">
-               <label for="last_name">Last Name</label>
+             <div class="input-field col s12">
+               <label for="username">username</label>
+               <input id="username" type="username" ng-model="userPass.username">
+
              </div>
            </div>
            <div class="row">
              <div class="input-field col s12">
-               <input id="password" type="password" class="validate" ng-model="user.password">
                <label for="password">Password</label>
+               <input id="password" type="password" ng-model="userPass.password">
+
              </div>
            </div>
-           <div class="row">
-             <div class="input-field col s12">
-               <input id="email" type="email" class="validate" ng-model="user.email">
-               <label for="email">Email</label>
-             </div>
-           </div>
+
            <button class="btn waves-effect waves-light" type="submit">Sign up
              <!-- <i class="material-icons right">send</i> -->
            </button>

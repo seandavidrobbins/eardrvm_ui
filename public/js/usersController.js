@@ -14,7 +14,6 @@
       })
       .then(function(response){
         self.users = response.data;
-        console.log(self.users);
       });
     }
 
@@ -33,6 +32,26 @@
       .catch(function(err){
         console.error(err);
       })
+    }
+
+    // Signup
+    self.signup = function(userPass){
+      console.log("This is the userPass");
+      console.log(userPass);
+      $http.post(`${rootUrl}/users`, {user: {username: userPass.username, password: userPass.password }})
+      .catch(function(err){
+        console.error(err);
+      })
+      .then(function(response) {
+        console.log("Errors:");
+        console.log(response.data.errors);
+        console.log("User:");
+        console.log(response.data.user);
+        $state.go('home', {url: '/user-home'})
+      })
+      .catch((err) => {
+        console.error(err);
+      });
     }
 
     self.getUsers();

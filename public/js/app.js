@@ -10,7 +10,7 @@
           url: '/',
           templateUrl: '../partials/_welcome.html'
         })
-         .state('user-home', {
+         .state('home', {
           url: '/user-home',
           templateUrl: '../partials/_user-home.html'
         })
@@ -33,3 +33,4 @@
       }
 
 })()
+console.log("app.js");

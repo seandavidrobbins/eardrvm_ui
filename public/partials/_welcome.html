@@ -8,14 +8,14 @@
   <div id="container">
     <main id="center" class="column">
       <div ng-controller="usersController as users">
-        <form id="loginInput"  ng-submit="users.login(user)">
+        <form id="loginInput"  ng-submit="users.login(userPass)">
             <div class="input-field">
-                <input id="email" type="email" class="validate" ng-model="user.username">
+                <input id="username" type="username" class="validate" ng-model="userPass.username">
                 <label for="username">Email</label>
               </div>
 
               <div class="input-field">
-                <input id="password" type="password" class="validate" ng-model="user.password">
+                <input id="password" type="password" class="validate" ng-model="userPass.password">
                 <label for="password">Password</label>
               </div>
 

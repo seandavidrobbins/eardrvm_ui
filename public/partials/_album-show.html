@@ -1,0 +1,7 @@
+<form enctype="multipart/form-data"
+  action="http://localhost:3000/photos" method="POST" name="photo">
+  <label>Title:</label>
+  <input type="text" name="photo[title]" /><br>
+  <input type="file" name="photo[image]" required /><br>
+  <input type="submit" value="Upload!" />
+</form>

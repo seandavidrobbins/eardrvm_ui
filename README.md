@@ -36,3 +36,6 @@ inster photo/photos here
 
 #### Day 1
 Spent the first night after class shooting around ideas of what project we wanted to create. First we were thinking about a sound share app, but in our limited time learning AWS and a media player functionality would be too much. So we decided on a picture sharing app, sort of like an imagur or instagram. Took some time to think of a name and set up the GitHub and Trello Team to collaborate. It was a very short night.
+
+#### Day 2
+Took most of the morning and afternoon to really nail down the Data modeling for our app, considering our MVP and our potential reach goals. After taking an afternoon of going over technical interviews with a guest speaker, Aaron and Eric did some pair programming to knock out the initial rails api up to the controllers and routes. Arron also set up a skeleton for the angular ui. 

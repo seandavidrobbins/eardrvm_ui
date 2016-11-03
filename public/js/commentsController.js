@@ -6,3 +6,4 @@
 
   }
 })()
+console.log("commentsController.js");

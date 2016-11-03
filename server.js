@@ -4,14 +4,13 @@ var path    = require('path');
 
 app.use(express.static(path.join(__dirname,'public')));
 
-//Controllers
-var Controller = require('./js/indexController.js');
-
 
 
 
 //Routing
-app.use('/', indexController);
+app.get('/', function(req, res){
+  res.render('index')
+});
 
 app.listen(process.env.PORT || 4000, function(){
   console.log("=============================");

@@ -48,3 +48,6 @@ Spent the first night after class shooting around ideas of what project we wante
 
 #### Day 2
 Took most of the morning and afternoon to really nail down the Data modeling for our app, considering our MVP and our potential reach goals. After taking an afternoon of going over technical interviews with a guest speaker, Aaron and Eric did some pair programming to knock out the initial rails api up to the controllers and routes. Arron also set up a skeleton for the angular ui. 
+
+#### Day 3
+Aaron worked on finishing up the controllers, Sean worked on the angular partials for the layout and som initial views, and Eric worked on getting the AWS S3 and paperclip working to enable photo upload.

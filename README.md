@@ -26,11 +26,20 @@ Users will be able to register and create albums and photos. Albums and photos w
 
 ## User Stories
 
-List user stories here
++ As a new user, I can register a new account
++ If I have an account I can log in and log out
++ As a logged in user, I can upload photos
++ As a logged in user, I can create photo albums with new photos or already uploaded photos
++ I can click on a photo in an album and it brings me to a larger version of that photo
++ When looking at an enlarged photo I can leave a comment on the photo
++ If I do not like my comment I can remove the comment
++ As a user I can remove photos from my albums
++ As a user or guest, I can search albums of users and view their photos
+
 
 ## Wireframe
 
-inster photo/photos here
+insert photo/photos here
 
 ## Daily Progress
 

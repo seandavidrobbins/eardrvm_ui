@@ -35,6 +35,21 @@
       })
     }
 
+    // Signup
+    self.signup = function(userPass){
+      $http.post(`${rootUrl}/users`, {user: {username: userPass.username, password: userPass.password }})
+      .catch(function(err){
+        console.error(err);
+      })
+      .then(function(response) {
+        console.log(response);
+        $state.go('login', {url: '/login'})
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+    }
+
     self.getUsers();
   }
 })()

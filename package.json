@@ -1,0 +1,24 @@
+{
+  "name": "nitpic-ui",
+  "version": "1.0.0",
+  "description": "![nitpic pic](img/NITPIC.png) ##### a photosharing app (not that there arent already a crap ton)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estermer/nitpic-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estermer/nitpic-ui/issues"
+  },
+  "homepage": "https://github.com/estermer/nitpic-ui#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "path": "^0.12.7"
+  }
+}

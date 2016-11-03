@@ -1,0 +1,26 @@
+
+<div id="loginCss">
+
+<h2 id="login">Login</h2>
+
+  <div id="container">
+    <main id="center" class="column">
+      <div ng-controller="usersController as users">
+        <form id="loginInput"  ng-submit="users.login(user)">
+            <div class="input-field">
+                <input id="email" type="email" class="validate" ng-model="user.username">
+                <label for="username">Email</label>
+              </div>
+
+              <div class="input-field">
+                <input id="password" type="password" class="validate" ng-model="user.password">
+                <label for="password">Password</label>
+              </div>
+
+            <button id="loginButton" class="btn waves-effect waves-light" type="submit">Log in
+            </button>
+          </form>
+        </div>
+       </div>
+     </div>
+    </main>

@@ -4,6 +4,17 @@ var path    = require('path');
 
 app.use(express.static(path.join(__dirname,'public')));
 
-app.listen(4000, function(){
-    console.log("app listening on port 4000");
+//Controllers
+var Controller = require('./js/indexController.js');
+
+
+
+
+//Routing
+app.use('/', indexController);
+
+app.listen(process.env.PORT || 4000, function(){
+  console.log("=============================");
+  console.log("SERVER LISTENING ON PORT 4000");
+  console.log("=============================");
 });

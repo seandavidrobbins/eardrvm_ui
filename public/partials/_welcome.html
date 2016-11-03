@@ -1,36 +1,34 @@
 
 
 <img id="welcomePic" src="http://i68.tinypic.com/161x64z.jpg">
-    <div class="layer">
+<div class="layer">
 
+  <div id="loginCss">
+    <br>
+    <br>
+    <br>
+  <h2 id="login">Login</h2>
 
-<div id="loginCss">
-  <br>
-  <br>
-  <br>
-<h2 id="login">Login</h2>
-
-  <div id="container">
-    <main id="center" class="column">
-      <div ng-controller="usersController as users">
-        <form id="loginInput"  ng-submit="users.login(userPass)">
-            <div class="input-field">
-                <input id="username" type="username" class="validate" ng-model="userPass.username">
-                <label for="username">Email</label>
-              </div>
-              </div>
-
+    <div id="container">
+      <main id="center" class="column">
+        <div ng-controller="usersController as users">
+          <form id="loginInput"  ng-submit="users.login(userPass)">
               <div class="input-field">
-                <input id="password" type="password" class="validate" ng-model="userPass.password">
+                  <input id="username" type="username" ng-model="userPass.username">
+                  <label for="username">Email</label>
+              </div>
+              <div class="input-field">
+                <input id="password" type="password" ng-model="userPass.password">
                 <label for="password">Password</label>
               </div>
 
               <button id="loginButton" class="btn waves-effect waves-light" type="submit">Log in
-            </button>
+              </button>
           </form>
-        </div>
-       </div>
-     </div>
+      </div>
+    </div>
+  </div>
+</div>
 
      <h2 id="signupCss">Sign Up</h2>
 
@@ -57,6 +55,7 @@
            </button>
          </form>
        </div>
+      </div>
 
 
 </main>

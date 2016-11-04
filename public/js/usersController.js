@@ -13,11 +13,11 @@
         console.error(err);
       })
       .then(function(response){
-        self.users = response.data;
-        console.log(self.users);
+        self.allUsers = response.data;
       });
     }
 
+///////// AUTHORIZATION BEGIN //////////
     // User login
     self.login = function(userPass){
       $http.post(`${rootUrl}/users/login`, {user: {username: userPass.username, password: userPass.password}})
@@ -26,7 +26,7 @@
       })
       .then(function(response){
         self.user = response.data.user
-
+        localStorage.setItem('user_id', JSON.stringify(response.data.user_id));
         localStorage.setItem('token', JSON.stringify(response.data.token));
         $state.go('home', {url: '/user-home', user: response.data.user});
       })
@@ -34,6 +34,31 @@
         console.error(err);
       })
     }
+    // Signup
+    self.signup = function(userPass){
+      $http.post(`${rootUrl}/users`, {user: {username: userPass.username, password: userPass.password }})
+      .catch(function(err){
+        console.error(err);
+      })
+      .then(function(response) {
+        self.user = response.data.user
+        localStorage.setItem('user_id', JSON.stringify(response.data.user_id));
+        localStorage.setItem('token', JSON.stringify(response.data.token));
+        $state.go('home', {url: '/user-home', user: response.data.user});
+      })
+      .catch(function(err) {
+        console.error(err);
+      });
+    }
+    // Logout
+    self.logout = function(userPass) {
+      localStorage.removeItem('token');
+      $state.go('welcome', {url: '/'});
+    }
+///////// AUTHORIZATION END //////////
+
+///////// CREATE ALBUMS  BEGIN //////////
+
 
     self.getUsers();
   }

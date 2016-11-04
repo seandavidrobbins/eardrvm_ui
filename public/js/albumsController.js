@@ -2,12 +2,21 @@
   angular.module('nitpic')
     .controller('albumsController', albumsController);
 
+
   albumsController.$inject = ['$scope', '$http', 'Upload', '$timeout'];
 
-  function albumsController($scope, $http, Upload, $timeout){
+  function albumsController($scope, $http, Upload, $timeout, $state, $stateParams){
     var url = 'http://localhost:3000';
 
-    //need an initial http to get all the photos for an album
+    self.getAlbums = function(){
+      $http.get(`${rootUrl}/albums`)
+      .catch(function(err){
+        console.error(err);
+      })
+      .then(function(response){
+        self.albums = response.data.albums
+      })
+    }
 
     $scope.uploadPhoto = function(image){
       console.log("Uploading...");
@@ -21,6 +30,9 @@
       .catch(function(err){
         console.log(err);
       });
-    };
+    }
+
+    // Call methods on load
+    this.getAlbums();
   }
 })()

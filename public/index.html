@@ -37,7 +37,7 @@
 
   </head>
 
-  <body>
+  <body ng-controller="usersController as userCtrl">
 
     <!--==========**HEADER===========-->
     <nav class="black">
@@ -52,6 +52,7 @@
              <li><a class="navHov" ui-sref="user-home">Home</a></li>
              <li><a class="navHov" ui-sref="gallery">Gallery</a></li>
              <li><a class="navHov" ui-sref="contact">Contact</a></li>
+             <li><a class="navHov" ui-sref="welcome" ng-click="userCtrl.logout()">Logout</a></li>
            </ul>
          </div>
      </nav>

@@ -1,7 +1,7 @@
 
 <div class="row center">
 
-<div class="row center" ng-controller="usersController as user">
+<div class="row center" ng-controller="albumsController as albumCtrl">
 
 
  <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'>Albums</a>
@@ -15,5 +15,20 @@
    <li><a ui-sref="#">Album #4</a></li>
  </ul>
 
+ <div id="container">
+     <form id="createAlbum" ng-submit="albumCtrl.createAlbum(newAlbum)">
+         <div class="input-field">
+            <label for="title">Title</label>
+             <input id="title" type="text" ng-model="newAlbum.title">
+         </div>
+         <div class="input-field">
+            <label for="description">Description</label>
+             <input id="description" type="text" ng-model="newAlbum.description">
+         </div>
 
-</div>
+         <button id="newAlbumButton" class="btn waves-effect waves-light" type="submit">Create Album
+         </button>
+     </form>
+ </div> <!-- Close Container div -->
+
+</div> <!-- Close Ctrl div -->

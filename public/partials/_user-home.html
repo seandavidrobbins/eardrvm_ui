@@ -1,7 +1,7 @@
 
 <div class="row center">
 
-<div class="row center" ng-controller="usersController as user">
+<div class="row center" ng-controller="albumsController as albumCtrl">
 
     <h3>Your Albums</h3>
         <div>
@@ -18,8 +18,36 @@
       </div>
 
 
+
       <!--==========** MAIN FOOTER **===========-->
           <footer class="page-footer black">
             <div class="container">  
                 <div class="col l6 s12">
       </footer>
+
+ <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+   <li><a ui-sref="#">Album #1</a></li>
+   <li><a ui-sref="#">Album #2</a></li>
+   <li class="divider"></li>
+   <li><a ui-sref="#">Album #3</a></li>
+   <li><a ui-sref="#">Album #4</a></li>
+ </ul>
+
+ <div id="container">
+     <form id="createAlbum" ng-submit="albumCtrl.createAlbum(newAlbum)">
+         <div class="input-field">
+            <label for="title">Title</label>
+             <input id="title" type="text" ng-model="newAlbum.title">
+         </div>
+         <div class="input-field">
+            <label for="description">Description</label>
+             <input id="description" type="text" ng-model="newAlbum.description">
+         </div>
+
+         <button id="newAlbumButton" class="btn waves-effect waves-light" type="submit">Create Album
+         </button>
+     </form>
+ </div> <!-- Close Container div -->
+
+</div> <!-- Close Ctrl div -->

@@ -1,3 +1,4 @@
+
 <div id="addAlbum" ng-controller="albumsController as albumCtrl">
 
     <h3>Add Album</h3>
@@ -20,3 +21,7 @@
           <div class="container">  
               <div class="col l6 s12">
     </footer>
+
+<ul ng-controller="albumsController as albumCtrl">
+  <li ng-repeat="album in albumCtrl.allAlbums"></li>
+</ul>

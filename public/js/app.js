@@ -1,6 +1,7 @@
 (function() {
-  angular.module('nitpic', ['ui.router'])
+  angular.module('nitpic', ['ui.router', 'ngFileUpload'])
     .config(AuthRouter);
+
 
     AuthRouter.$inject = ['$stateProvider', '$urlRouterProvider']
 
@@ -20,7 +21,9 @@
         })
         .state('album-show', {
           url: '/album-show',
-          templateUrl: '../partials/_album-show.html'
+          templateUrl: '../partials/_album-show.html',
+          controller: 'albumsController',
+          controllerAs: 'album'
         })
         .state('photo-show', {
           url: '/photo-show',
@@ -33,5 +36,6 @@
       }
 
 })()
+
 
 console.log("app.js");

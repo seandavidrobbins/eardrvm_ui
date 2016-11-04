@@ -2,10 +2,10 @@
 <html ng-app="nitpic">
   <head>
     <meta charset="utf-8">
-    <title>NITPIC BIATCH</title>
+    <title>NITPIC</title>
 
 
-    <!--********************* CSS **********************-->
+  <!--********************* CSS **********************-->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -27,23 +27,21 @@
     <script src='js/commentsController.js'></script>
     <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <script src="js/ng-file-upload/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+    <script src="js/ng-file-upload/ng-file-upload.min.js"></script>
 
   </head>
 
   <body>
-<div id="wrapper">
+
       <!--==========**HEADER===========-->
       <nav class="black">
       <div class="header-wrapper col l6 s12">
         <a ui-sref="home"><img id='logo' src="http://i65.tinypic.com/2nrk5u8.png"></a>
 
-        <a ui-sref="home" class="brand-logo black"><span class="portText">NITPIC</span></a>
+        <a ui-sref="user-home" class="brand-logo black"><span class="portText">NITPIC</span></a>
 
-
-
-             <ul id="nav-mobile" class="wh right hide-on-med-and-down">
+             <ul id="nav-mobile" class=" right hide-on-med-and-down">
                <li><a class="navHov" ui-sref="user-home">Home</a></li>
                <li><a class="navHov" ui-sref="gallery">Gallery</a></li>
              </ul>
@@ -56,49 +54,5 @@
 
     <main ui-view></main>
 
-
-    <!--==========** MAIN FOOTER **===========-->
-        <footer class="index-footer black">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">About Nitpic</h5>
-                <p class="grey-text text-lighten-4">Learn about the creators of NITPIC</p>
-
-        <!--==========** FOOTER LINKS **===========-->
-              </div>
-              <div class="col l3 s12">
-                <h5 class="white-text">Connect</h5>
-                  <!-- FACEBOOK -->
-                  <a target="_blank" title="follow me on facebook" href="#"><img alt="follow us on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0></a>
-                  <!-- TWITTER -->
-                    <a target="_blank" title="follow us on Twitter" href="#"><img alt="follow us on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" border=0></a>
-                  <!-- YOUTUBE  -->
-                  <a target="_blank" title="follow us on youtube" href="#"><img alt="follow us on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" border=0></a>
-                  <!-- INSTAGRAM -->
-                  <a target="_blank" title="follow us on instagram" href="#"><img alt="follow us on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0></a>
-              </div>
-              <div class="col l3 s12">
-            </div>
-
-    <!--FOOTER -->
-          <div class="footer-wrapper col 13 s13">
-            <footer id="footer"><p>
-              <li><a class="navHov" ui-sref="user-home">Home</a></li>
-              <li><a class="navHov" ui-sref="contact">Contact</a></li>
-              <li><a class="navHov" ui-sref="#">Advertising</a></li>
-            </footer>
-
-          </div>
-        </div>
-
-        <!--==========** COPYRIGHT FOOTER **===========-->
-          <div class="footer-copyright">
-            <div class="container white-text">
-            Created by <a class="brown-text text-lighten-3">Aaron, Eric & Sean</a>
-            </div>
-          </div>
-        </footer>
-	</div><!-- #wrapper -->
   </body>
 </html>

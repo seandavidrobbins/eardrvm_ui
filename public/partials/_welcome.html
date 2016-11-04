@@ -1,8 +1,9 @@
 
 
+<body>
 <!-- <div class="layer">
 </div> -->
-<div id="index-banner" class="parallax-container">
+<div id="index-banner" class="custom-container">
   <div class="section no-pad-bot">
     <div class="container">
       <br><br>
@@ -15,6 +16,7 @@
 
     </div>
   </div>
+
   <div class="parallax"><img src="bg-cta.jpg" alt="Unsplashed background img 1"></div>
 </div>
 
@@ -27,7 +29,6 @@
       <div class="col s12 m4">
         <div class="icon-block">
           <div id="loginCss">
-
           <h2 id="login">Login</h2>
 
             <div id="container">
@@ -35,7 +36,7 @@
                 <div ng-controller="usersController as users">
                   <form id="loginInput"  ng-submit="users.login(userPass)">
                       <div class="input-field">
-                          <input id="username" type="username" class="validate" ng-model="userPass.username">
+                          <input id="username" type="text" class="validate" ng-model="userPass.username">
                           <label for="username">Username</label>
                         </div>
                         </div>
@@ -55,6 +56,9 @@
         </div>
       </div>
 
+
+
+
       <div class="col s12 m4">
         <div class="icon-block">
           <h2 class="center brown-text"><h2 id="signupCss">Sign Up</h2>
@@ -65,7 +69,7 @@
                 <div class="row">
                   <div class="input-field col s12">
                     <label for="username">username</label>
-                    <input id="username" type="username" ng-model="userPass.username">
+                    <input id="username" type="text" ng-model="userPass.username">
 
                   </div>
                 </div>
@@ -77,63 +81,53 @@
                   </div>
                 </div>
 
+
                 <button class="btn waves-effect waves-light" type="submit">Sign up
                   <!-- <i class="material-icons right">send</i> -->
                 </button>
               </form>
             </div>
+          </div>
+       </div>
+     </div>
+    </div>
+  </div>
 
-         </div>
+
+
+</main>
+<!--==========** MAIN FOOTER **===========-->
+    <footer class="index-footer black">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">About Nitpic</h5>
+            <p class="grey-text text-lighten-4">Learn about the creators of NITPIC</p>
+
+  <!--==========** FOOTER LINKS **===========-->
         </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+            <!-- FACEBOOK -->
+            <a target="_blank" title="follow me on facebook" href="#"><img alt="follow us on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0></a>
+            <!-- TWITTER -->
+              <a target="_blank" title="follow us on Twitter" href="#"><img alt="follow us on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" border=0></a>
+            <!-- YOUTUBE  -->
+            <a target="_blank" title="follow us on youtube" href="#"><img alt="follow us on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" border=0></a>
+            <!-- INSTAGRAM -->
+            <a target="_blank" title="follow us on instagram" href="#"><img alt="follow us on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0></a>
+        </div>
+        <div class="col l3 s12">
+      </div>
+
+<!--FOOTER -->
+  <div class="footer-wrapper col 6 s12">
+    <div class="footer-copyright">
+      <div class="container white-text"> Created by  <a class="brown-text text-lighten-3"  href="https://github.com/estermer/nitpic-ui"> Aaron, Eric & Sean </a>
       </div>
     </div>
-
-  </div>
-
-
-<div class="parallax-container valign-wrapper">
-  <div class="section no-pad-bot">
-    <div class="container">
-      <div class="row center">
-        <h5 class="header col s12 light"></h5>
-      </div>
-    </div>
-  </div>
-  <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
-</div>
-
-<div class="container">
-  <div class="section">
-
-    <div class="row">
-      <div class="col s12 center">
-        <h3><i class="mdi-content-send brown-text"></i></h3>
-        <h4>Contact Us</h4>
-        <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-<div class="parallax-container valign-wrapper">
-  <div class="section no-pad-bot">
-    <div class="container">
-      <div class="row center">
-        <h5 class="header col s12 light"></h5>
-      </div>
-    </div>
-  </div>
-  <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
-</div>
+  </footer>
 
 </body>
-</main>
-
-<!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
 
 </html>

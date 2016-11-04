@@ -22,7 +22,7 @@
         .state('album-show', {
           url: '/album-show',
           templateUrl: '../partials/_album-show.html',
-          // controller: 'albumsController',
+          // controller: 'mainController',
           // controllerAs: 'album'
         })
         .state('new-album', {

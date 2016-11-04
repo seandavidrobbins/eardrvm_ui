@@ -1,11 +1,11 @@
 (function(){
   angular.module('nitpic')
-    .controller('albumsController', albumsController);
+    .controller('mainController', mainController);
 
 
-  albumsController.$inject = ['$scope', '$http', 'Upload', '$timeout', '$state', '$stateParams'];
+  mainController.$inject = ['$scope', '$http', 'Upload', '$timeout', '$state', '$stateParams'];
 
-  function albumsController($scope, $http, Upload, $timeout, $state, $stateParams){
+  function mainController($scope, $http, Upload, $timeout, $state, $stateParams){
     var rootUrl = 'http://localhost:3000';
     var self = this;
 
@@ -88,4 +88,4 @@
     // this.getAllAlbums();
   }
 })()
-console.log("albumsController.js");
+console.log("mainController.js");

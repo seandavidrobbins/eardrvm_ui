@@ -1,10 +1,18 @@
 
 <div class="row center">
 
-<div class="row center" ng-controller="albumsController as albumCtrl">
+<div class="row center" ng-controller="mainController as mainCtrl">
   <a ui-sref="new-album">Create New Album</a>
 
  <!-- <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'>Albums</a> -->
+<div class="" ng-repeat="album in mainCtrl.albums">
+  <div class="">
+    <h3>{{album.title}}</h3>
+    <p>
+      {{album.description}}
+    </p>
+  </div>
+</div>
 
  <!-- Dropdown Structure -->
   <ul id='dropdown1' class='dropdown-content'>

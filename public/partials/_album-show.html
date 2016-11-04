@@ -1,0 +1,12 @@
+<!-- <div class="album" ng-controller="albumsController as album"> -->
+  <form name="myForm">
+    <label>Title:</label>
+    <input type="text" name="title" ng-model="title"/><br>
+    <input type="file" ngf-select ng-model="image" name="image"
+             accept="image/*" ngf-max-size="2MB" required
+             ngf-model-invalid="errorFile"><br>
+    <button ng-click="image = null" ng-show="image">Remove</button>
+    <button ng-disabled="!myForm.$valid"
+              ng-click="uploadPhoto(image)">Submit</button>
+  </form>
+<!-- </div> -->

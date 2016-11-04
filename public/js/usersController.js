@@ -2,6 +2,8 @@
   angular.module('nitpic')
     .controller('usersController', usersController);
 
+  usersController.$inject = ['$http', '$state', '$stateParams'];
+
   function usersController($http, $state, $stateParams){
     var rootUrl = "http://localhost:3000";
     var self = this;

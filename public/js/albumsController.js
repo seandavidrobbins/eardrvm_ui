@@ -2,22 +2,36 @@
   angular.module('nitpic')
     .controller('albumsController', albumsController);
 
-  function albumsController($http, $state, $stateParams){
-    var rootUrl = "http://localhost:3000";
+
+  albumsController.$inject = ['$scope', '$http', 'Upload', '$timeout', '$state', '$stateParams'];
+
+  function albumsController($scope, $http, Upload, $timeout, $state, $stateParams){
+    var rootUrl = 'http://localhost:3000';
     var self = this;
 
-    self.getAlbums = function(){
+    self.getAllAlbums = function(){
       $http.get(`${rootUrl}/albums`)
       .catch(function(err){
         console.error(err);
       })
       .then(function(response){
-        self.albums = response.data.albums
+        self.allAlbums = response.data.albums
+        console.log(self.allAlbums);
+      })
+    }
+
+    self.getUserAlbums = function(){
+      $http.get(`${rootUrl}/user/${localStorage.getItem('user_id')}`)
+      .catch(function(err){
+        console.error(err);
+      })
+      .then(function(response){
+        self.userAlbums = response.data.albums
+        console.log(self.userAlbums);
       })
     }
 
     self.createAlbum = function(album) {
-      console.log("THIS IS CREATE AL");
       var token = JSON.stringify(localStorage.getItem('token')).replace(/"/g,"");
       console.log(token);
       $http({
@@ -42,9 +56,32 @@
       })
     }
 
-    // Call methods on load
-    this.getAlbums();
+    self.showAlbum = function(albumId) {
+      $http.get(`${rootUrl}/users/${localStorage.getItem('user_id')}/albums/${albumId}`)
+      .then(function(response){
+        album = response.data.album;
+        console.log(album);
+      })
+      .catch(function(err){
+        console.error(err);
+      })
+    }
+    $scope.uploadPhoto = function(image){
+      console.log("Uploading...");
+      image.upload = Upload.upload({
+        url: url + '/photos',
+        data: {photo: {title: $scope.title, image: image}}
+      })
+      .then(function(response){
+          console.log(response);
+      })
+      .catch(function(err){
+        console.log(err);
+      });
 
+    }
+
+    // Call methods on load
+    this.getAllAlbums();
   }
 })()
-console.log("albumsController.js");

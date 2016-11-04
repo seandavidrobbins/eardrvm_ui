@@ -9,8 +9,9 @@
     var rootUrl = 'http://localhost:3000';
     var self = this;
 
+    // Get all albums
     self.getAllAlbums = function(){
-      $http.get(`${rootUrl}/albums`)
+      $http.get(`${rootUrl}/user/${localStorage.getItem('user_id')}/albums`)
       .catch(function(err){
         console.error(err);
       })
@@ -19,9 +20,9 @@
         console.log(self.allAlbums);
       })
     }
-
+    // Get all albums associated with user
     self.getUserAlbums = function(){
-      $http.get(`${rootUrl}/user/${localStorage.getItem('user_id')}`)
+      $http.get(`${rootUrl}/albums/${localStorage.getItem('user_id')}`)
       .catch(function(err){
         console.error(err);
       })
@@ -66,6 +67,8 @@
         console.error(err);
       })
     }
+
+    // Upload photo method
     $scope.uploadPhoto = function(image){
       console.log("Uploading...");
       image.upload = Upload.upload({
@@ -82,6 +85,7 @@
     }
 
     // Call methods on load
-    this.getAllAlbums();
+    // this.getAllAlbums();
   }
 })()
+console.log("albumsController.js");

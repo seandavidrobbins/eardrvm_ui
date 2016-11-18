@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html ng-app="nitpic">
+<html ng-app="sound_overflow">
   <head>
     <meta charset="utf-8">
-    <title>NITPIC</title>
+    <title>Sound Overflow</title>
 
 
     <!--********************* CSS **********************-->
@@ -14,49 +14,57 @@
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <link rel="icon" href="http://i65.tinypic.com/jb08sj.png?v=2" type="image/x-icon" />
+    <link rel="icon" href="./img/piano-icon.png" type="image/x-icon" />
 <!--*********************************************-->
 <!--**************ANGULAR/JS/JQUERY**************-->
 <!--*********************************************-->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <!-- <script type="text/javascript" src="/bower_components/wavesurfer.js/build/wavesurfer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <script src='js/app.js'></script>
     <script src='js/mainController.js'></script>
-    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script src='js/sce.js'></script>
+    <script src='js/wavesurfer.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script src="js/ng-file-upload/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
     <script src="js/ng-file-upload/ng-file-upload.min.js"></script>
+
+
   </head>
 
   <body ng-controller="mainController as mainCtrl">
-
     <!--==========**HEADER===========-->
     <nav class="black">
-    <div class="header-wrapper col l6 s12">
-      <a ui-sref="home"><img id='logo' src="./img/NITPIC_tinygit .png"></a>
+      <div class="header-wrapper col l6 s12">
 
-      <a ui-sref="home" class="brand-logo black"><span class="portText">NITPIC</span></a>
+        <!-- duplicate the two links ag do an ng-show hide based on
+              a users login to reference user home if logged in
+              or welcome home when not logged in-->
+        <a ui-sref="welcome"><img id='logo' src="./img/piano-icon.png"></a>
+        <a ui-sref="welcome" class="left brand-logo black"><span class="portText">Sound Overflow</span></a>
 
+        <ul ng-if="mainCtrl.user" id="nav-mobile" class="black right hide-on-med-and-down">
+          <li><a class="navHov" ui-sref="home" ng-click="mainCtrl.getUserAlbums(mainCtrl.user.id)">Home</a></li>
+          <li><a class="navHov" ui-sref="playlist" ng-click="mainCtrl.getUsers()">Playlist</a></li>
+          <li><a class="navHov" ui-sref="contact">Contact</a></li>
+          <li><a class="navHov" ui-sref="welcome" ng-click="mainCtrl.logout()">Logout</a></li>
+        </ul>
+        <ul ng-if="!mainCtrl.user" id="nav-mobile" class="wh right hide-on-med-and-down">
+          <li><a class="navHov" ui-sref="login">Log In</a></li>
+          <li><a class="navHov" ui-sref="signup">Sign Up</a></li>
+          <li><a class="navHov" ui-sref="playlist" ng-click="mainCtrl.getUsers()">Playlist</a></li>
+          <li><a class="navHov" ui-sref="contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--==========**HEADER===========-->
+    <nav class="black"></nav>
+    <br>
+    <br>
 
-
-           <ul id="nav-mobile" class="wh right hide-on-med-and-down">
-             <li><a class="navHov" ui-sref="user-home">Home</a></li>
-             <li><a class="navHov" ui-sref="gallery">Gallery</a></li>
-             <li><a class="navHov" ui-sref="contact">Contact</a></li>
-             <li><a class="navHov" ui-sref="welcome" ng-click="mainCtrl.logout()">Logout</a></li>
-           </ul>
-         </div>
-     </nav>
-     <!--==========**HEADER===========-->
-       <nav class="black">
-
-        </nav>
-
-
-<br>
-<br>
-
-  <main ui-view></main>
+    <main ui-view></main>
 
   </body>
 </html>

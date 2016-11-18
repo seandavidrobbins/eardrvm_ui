@@ -1,23 +1,29 @@
 {
-  "name": "sound_overflow_ui",
+  "name": "sound_overflow",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "description": "Sound sharing/streaming app, with music forum/blog",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/starvingartist88/sound_overflow_ui.git"
+    "url": "https://github.com/starvingartist88/sound_overflow_ui"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/starvingartist88/sound_overflow_ui/issues"
+    "url": "https://github.com/starvingartist88/sound_overflow_ui"
   },
-  "homepage": "https://github.com/starvingartist88/sound_overflow_ui#readme"
+  "homepage": "https://github.com/starvingartist88/sound_overflow_ui",
+  "dependencies": {
+    "express": "^4.14.0",
+    "ng-file-upload": "^12.2.12",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": "6.3.1"
+  }
 }

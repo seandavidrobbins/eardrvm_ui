@@ -1,29 +1,23 @@
 {
-  "name": "nitpic-ui",
+  "name": "sound_overflow_ui",
   "version": "1.0.0",
-  "description": "![nitpic pic](img/NITPIC.png) ##### a photosharing app (not that there arent already a crap ton)",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/estermer/nitpic-ui.git"
+    "url": "git+https://github.com/starvingartist88/sound_overflow_ui.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/estermer/nitpic-ui/issues"
+    "url": "https://github.com/starvingartist88/sound_overflow_ui/issues"
   },
-  "homepage": "https://github.com/estermer/nitpic-ui#readme",
-  "dependencies": {
-    "express": "^4.14.0",
-    "ng-file-upload": "^12.2.12",
-    "path": "^0.12.7"
-  },
-  "engines": {
-    "node": "6.3.1"
-  }
+  "homepage": "https://github.com/starvingartist88/sound_overflow_ui#readme"
 }

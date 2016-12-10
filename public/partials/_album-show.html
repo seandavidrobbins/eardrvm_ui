@@ -1,11 +1,10 @@
-
 <div class="custom-container">
-  <div class="section no-pad-bot">
-    <div class="container">
-      <br><br>
-      <h1 class="header center teal-text text-lighten-2"></h1>
-      <div class="row center">
-        <h5 class="header col s12 light">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <h1 class="header center teal-text text-lighten-2"></h1>
+            <div class="row center">
+                <h5 class="header col s12 light">
           <button ui-sref="home" id="back" class="btn waves-effect waves-light">Go Back</button>
 
           <h4>{{mainCtrl.thisAlbum.title}}</h4>
@@ -14,38 +13,52 @@
           </p>
           <h6>{{mainCtrl.thisAlbum.id}}</h6>
           <h5>Created by: {{mainCtrl.thisAlbumOwner.username}}</h5>
-          <div ng-if="mainCtrl.isUser">
-          <form name="myForm" ng-submit="mainCtrl.uploadSong(audio,mainCtrl.thisAlbum.id)">
-            <label>Title:</label>
-            <input type="text" name="title" ng-model="title"/><br>
-            <input type="file" ngf-select ng-model="audio" name="audio"
-                     accept="audio/*|image/*" ngf-max-size="10MB" required
-                     ngf-model-invalid="errorFile"><br>
-            <button class="btn waves-effect waves-light" ng-click="audio = null" ng-show="audio">Remove</button>
-            <button type="submit" class="btn waves-effect waves-light">Submit</button>
-          </form>
-          <hr>
-          <button ui-sref="album-update" class="btn waves-effect waves-light">Edit Album</button>
-          <h6 class="btn waves-effect waves-light" ng-click="mainCtrl.deleteAlbum(mainCtrl.thisAlbum)">Delete Album</h6>
-         </div>
-       </div>
-     </div>
-   </div>
-  </div>
+                <div ng-if="mainCtrl.isUser">
+                    <form name="myForm" ng-submit="mainCtrl.uploadSong(audio,mainCtrl.thisAlbum.id)">
+                        <label>Title:</label>
+                        <input type="text" name="title" ng-model="title" /><br>
+                        <input type="file" ngf-select ng-model="audio" name="audio" accept="audio/*|image/*" ngf-max-size="10MB" required ngf-model-invalid="errorFile"><br>
+                        <button class="btn waves-effect waves-light" ng-click="audio = null" ng-show="audio">Remove</button>
+                        <button type="submit" class="btn waves-effect waves-light">Submit</button>
+                    </form>
+                    <hr>
+                    <button ui-sref="album-update" class="btn waves-effect waves-light">Edit Album</button>
+                    <h6 class="btn waves-effect waves-light" ng-click="mainCtrl.deleteAlbum(mainCtrl.thisAlbum)">Delete Album</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- kwhittaker@frontrush.com -->
 
+<div class="container" style="text-align: center">
+    <div ng-repeat="song in mainCtrl.thisAlbum.songs">
+        <div ui-sref="song-show" ng-click="mainCtrl.showSong($index)">{{song.audio_file_name}}</div>
 
-  <div class="container" style="text-align: center">
-  <div ng-repeat="song in mainCtrl.thisAlbum.songs">
-  <div ui-sref="song-show" ng-click="mainCtrl.showSong($index)">{{song.audio_file_name}}</div>
+        <audio controls ng-src="{{ song.audio_thumb_url | trustUrl }}"></audio>
+    </div>
 
-  <audio controls id="waveform" ng-src="{{ song.audio_thumb_url | trustUrl }}"></audio>
-  </div>
+    <section>
+        <article>
+            <div class="chart">
+                <div class="bar bar-30 lime">
+                    <div class="face top">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face side-0">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face floor">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face side-a"></div>
+                    <div class="face side-b"></div>
+                    <div class="face side-1">
+                        <div class="growing-bar"></div>
+                    </div>
+                </div>
+            </div>
 
-    <button class="btn btn-primary" onclick="wavesurfer.playPause()">
-      <i class="glyphicon glyphicon-play"></i>
-      Play/Pause
-    </button>
-
-    <div id="equalizer" style="margin-top: 10px"></div>
-  </div>
+        </article>
+    </section>

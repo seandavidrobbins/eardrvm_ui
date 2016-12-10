@@ -1,63 +1,71 @@
 <!DOCTYPE html>
 <html ng-app="sound_overflow">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Sound Overflow</title>
 
 
     <!--********************* CSS **********************-->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link rel="icon" href="./img/piano-icon.png" type="image/x-icon" />
-<!--*********************************************-->
-<!--**************ANGULAR/JS/JQUERY**************-->
-<!--*********************************************-->
+    <!--*********************************************-->
+    <!--**************ANGULAR/JS/JQUERY**************-->
+    <!--*********************************************-->
     <!-- <script type="text/javascript" src="/bower_components/wavesurfer.js/build/wavesurfer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
     <script src='js/app.js'></script>
     <script src='js/mainController.js'></script>
     <script src='js/sce.js'></script>
     <script src='js/wavesurfer.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    <script src="js/ng-file-upload/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.5.8/angular-touch.js"></script>
+
+    <script src="js/ng-file-upload/ng-file-upload-shim.min.js"></script>
+    <!-- for no html5 browsers support -->
     <script src="js/ng-file-upload/ng-file-upload.min.js"></script>
 
+</head>
 
-  </head>
-
-  <body ng-controller="mainController as mainCtrl">
+<body ng-controller="mainController as mainCtrl">
     <!--==========**HEADER===========-->
     <nav class="black">
-      <div class="header-wrapper col l6 s12">
+        <div class="header-wrapper col l6 s12">
 
-        <!-- duplicate the two links ag do an ng-show hide based on
+            <!-- duplicate the two links ag do an ng-show hide based on
               a users login to reference user home if logged in
               or welcome home when not logged in-->
-        <a ui-sref="welcome"><img id='logo' src="./img/piano-icon.png"></a>
-        <a ui-sref="welcome" class="left brand-logo black"><span class="portText">Sound Overflow</span></a>
+            <a ui-sref="welcome"><img id='logo' src="./img/piano-icon.png"></a>
+            <a ui-sref="welcome" class="left brand-logo black"><span class="portText">Sound Overflow</span></a>
 
-        <ul ng-if="mainCtrl.user" id="nav-mobile" class="black right hide-on-med-and-down">
-          <li><a class="navHov" ui-sref="home" ng-click="mainCtrl.getUserAlbums(mainCtrl.user.id)">Home</a></li>
-          <li><a class="navHov" ui-sref="playlist" ng-click="mainCtrl.getUsers()">Playlist</a></li>
-          <li><a class="navHov" ui-sref="contact">Contact</a></li>
-          <li><a class="navHov" ui-sref="welcome" ng-click="mainCtrl.logout()">Logout</a></li>
-        </ul>
-        <ul ng-if="!mainCtrl.user" id="nav-mobile" class="wh right hide-on-med-and-down">
-          <li><a class="navHov" ui-sref="login">Log In</a></li>
-          <li><a class="navHov" ui-sref="signup">Sign Up</a></li>
-          <li><a class="navHov" ui-sref="playlist" ng-click="mainCtrl.getUsers()">Playlist</a></li>
-          <li><a class="navHov" ui-sref="contact">Contact</a></li>
-        </ul>
-      </div>
+            <ul ng-if="mainCtrl.user" id="nav-mobile" class="black right hide-on-med-and-down">
+                <li><a class="navHov" ui-sref="home" ng-click="mainCtrl.getUserAlbums(mainCtrl.user.id)">Home</a></li>
+                <li><a class="navHov" ui-sref="playlist" ng-click="mainCtrl.getUsers()">Playlist</a></li>
+                <li><a class="navHov" ui-sref="contact">Contact</a></li>
+                <li><a class="navHov" ui-sref="welcome" ng-click="mainCtrl.logout()">Logout</a></li>
+            </ul>
+            <ul ng-if="!mainCtrl.user" id="nav-mobile" class="wh right hide-on-med-and-down">
+                <li><a class="navHov" ui-sref="login">Log In</a></li>
+                <li><a class="navHov" ui-sref="signup">Sign Up</a></li>
+                <li><a class="navHov" ui-sref="playlist" ng-click="mainCtrl.getUsers()">Playlist</a></li>
+                <li><a class="navHov" ui-sref="contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
     <!--==========**HEADER===========-->
     <nav class="black"></nav>
@@ -66,5 +74,6 @@
 
     <main ui-view></main>
 
-  </body>
+</body>
+
 </html>

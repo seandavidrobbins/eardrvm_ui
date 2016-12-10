@@ -1,5 +1,5 @@
 (function() {
-  angular.module('sound_overflow', ['ui.router', 'ngFileUpload'])
+  angular.module('sound_overflow', ['ui.router', 'ngFileUpload', 'ui.bootstrap'])
     .config(AuthRouter);
 
 

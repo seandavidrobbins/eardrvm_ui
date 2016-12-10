@@ -8,6 +8,7 @@
 
   function mainController($scope, $http, Upload, $timeout, $state, $stateParams){
     var rootUrl = 'https://sound-overflow-api.herokuapp.com';
+    // var rootUrl = 'http://localhost:4000';
     var self = this;
     self.thisAlbum = $stateParams.album
 
